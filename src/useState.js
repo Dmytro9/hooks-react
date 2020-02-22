@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 
 // function expensiveInitialState() {
 //   return 10;
@@ -10,7 +9,7 @@ const initCreds = {
   password: ''
 };
 
-const App = () => {
+const UseStateComponent = () => {
   // const [count, setCount] = useState(10);
   // const [count, setCount] = useState(() => expensiveInitialState());
 
@@ -48,4 +47,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default UseStateComponent;
