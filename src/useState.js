@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 // function expensiveInitialState() {
 //   return 10;
 // }
 
 const initCreds = {
-  email: '',
-  password: ''
+  email: "",
+  password: "",
+  firstName: "",
 };
 
 const UseStateComponent = () => {
@@ -18,16 +19,16 @@ const UseStateComponent = () => {
   const [form, setCreds] = useState(initCreds);
 
   const handleClick = () => {
-    setCount(currentState => ({
+    setCount((currentState) => ({
       ...currentState,
-      count: currentState.count + 1
+      count: currentState.count + 1,
     }));
   };
 
-  const handleChange = e => {
+  const handleChange = (e) => {
     setCreds({
       ...form,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -41,6 +42,13 @@ const UseStateComponent = () => {
         type="password"
         name="password"
         value={form.password}
+        onChange={handleChange}
+      />
+      <input
+        type="text"
+        placeholder="firstName"
+        name="firstName"
+        value={form.firstName}
         onChange={handleChange}
       />
     </div>
