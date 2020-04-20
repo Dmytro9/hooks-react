@@ -8,6 +8,7 @@ import UseLayoutComponent from './useLayoutEffect';
 import UseCallbackComponent from './useCallback';
 import UseMemoComponent from './useMemo';
 import UseReducerComponent from './useReducer';
+import UseContextComponent from './useContext';
 
 ReactDOM.render(
   <>
@@ -18,6 +19,7 @@ ReactDOM.render(
     <UseCallbackComponent />
     <UseMemoComponent />
     <UseReducerComponent />
+    <UseContextComponent />
   </>,
   document.getElementById('root')
 );
