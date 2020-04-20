@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 // function expensiveInitialState() {
 //   return 10;
 // }
 
 const initCreds = {
-  email: "",
-  password: "",
-  firstName: "",
+  email: '',
+  password: '',
+  firstName: ''
 };
 
 const UseStateComponent = () => {
@@ -19,21 +19,22 @@ const UseStateComponent = () => {
   const [form, setCreds] = useState(initCreds);
 
   const handleClick = () => {
-    setCount((currentState) => ({
+    setCount(currentState => ({
       ...currentState,
-      count: currentState.count + 1,
+      count: currentState.count + 1
     }));
   };
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     setCreds({
       ...form,
-      [e.target.name]: e.target.value,
+      [e.target.name]: e.target.value
     });
   };
 
   return (
     <div className="App">
+      <h1>useState</h1>
       <button onClick={handleClick}>+</button>
       <div>count 1: {count}</div>
       <div>count 2: {count2}</div>

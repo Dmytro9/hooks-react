@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from 'react';
 
 const UseLayoutComponent = () => {
   const inputRef = useRef();
@@ -14,8 +14,9 @@ const UseLayoutComponent = () => {
 
   return (
     <div className="App">
+      <h1>useLayoutEffect</h1>
       <button>Click</button> <input ref={inputRef} placeholder="name" />
-      <div ref={divRef} style={{ display: "flex" }}>
+      <div ref={divRef} style={{ display: 'flex' }}>
         {Math.random()}
       </div>
       <pre>{JSON.stringify(rect, null, 2)}</pre>

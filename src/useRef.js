@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
 const UserefComponent = () => {
   const inputRef = useRef();
@@ -20,15 +20,16 @@ const UserefComponent = () => {
     setTimeout(() => {
       // resolve error when seting state on unmounted comnent
       if (isCurrent.current) {
-        setCount((state) => state + 1);
+        setCount(state => state + 1);
       }
     }, 2000);
   };
 
   return (
     <div className="App">
+      <h1>useRef</h1>
       {count}
-      <button onClick={handleClick}>Click</button>{" "}
+      <button onClick={handleClick}>Click</button>{' '}
       <input ref={inputRef} placeholder="name" />
     </div>
   );
